@@ -33,7 +33,6 @@ namespace OCTOBER.Server.Controllers.UD
 
         [HttpGet]
         [Route("Get/{SchoolID}/{CourseNo}")]
-        //  Route for this is....  <URL>/api/Course/Get/10
         public async Task<IActionResult> Get(int SchoolID, int CourseNo)
         {
             try
@@ -63,7 +62,6 @@ namespace OCTOBER.Server.Controllers.UD
             catch (Exception Dex)
             {
                 await _context.Database.RollbackTransactionAsync();
-                //List<OraError> DBErrors = ErrorHandling.TryDecodeDbUpdateException(Dex, _OraTranslateMsgs);
                 return StatusCode(StatusCodes.Status417ExpectationFailed, "An Error has occurred");
             }
         }
@@ -94,7 +92,6 @@ namespace OCTOBER.Server.Controllers.UD
             catch (Exception Dex)
             {
                 await _context.Database.RollbackTransactionAsync();
-                //List<OraError> DBErrors = ErrorHandling.TryDecodeDbUpdateException(Dex, _OraTranslateMsgs);
                 return StatusCode(StatusCodes.Status417ExpectationFailed, "An Error has occurred");
             }
         }
@@ -129,7 +126,6 @@ namespace OCTOBER.Server.Controllers.UD
             catch (Exception Dex)
             {
                 await _context.Database.RollbackTransactionAsync();
-                //List<OraError> DBErrors = ErrorHandling.TryDecodeDbUpdateException(Dex, _OraTranslateMsgs);
                 return StatusCode(StatusCodes.Status417ExpectationFailed, "An Error has occurred");
             }
         }
@@ -162,7 +158,6 @@ namespace OCTOBER.Server.Controllers.UD
             catch (Exception Dex)
             {
                 await _context.Database.RollbackTransactionAsync();
-                //List<OraError> DBErrors = ErrorHandling.TryDecodeDbUpdateException(Dex, _OraTranslateMsgs);
                 return StatusCode(StatusCodes.Status417ExpectationFailed, "An Error has occurred");
             }
         }
@@ -193,7 +188,6 @@ namespace OCTOBER.Server.Controllers.UD
             catch (Exception Dex)
             {
                 await _context.Database.RollbackTransactionAsync();
-                //List<OraError> DBErrors = ErrorHandling.TryDecodeDbUpdateException(Dex, _OraTranslateMsgs);
                 return StatusCode(StatusCodes.Status417ExpectationFailed, "An Error has occurred");
             }
         }
